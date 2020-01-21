@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {parseISO, formatRelative} from 'date-fns';
-import pt from 'date-fns/locale/pt';
+import pt from 'date-fns/locale/pt-BR';
 import {TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -21,7 +21,7 @@ export default function Appointment({data, onCancel}) {
           source={{
             uri: data.provider.avatar
               ? data.provider.avatar.url
-              : 'https://api.adorable.io/avatars/285/abott@adorable.png',
+              : `https://api.adorable.io/avatar/50/${data.provider.name}`,
           }}
         />
 
